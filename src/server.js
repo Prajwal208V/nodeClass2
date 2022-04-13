@@ -6,7 +6,7 @@ const app=express();
 app.use(cors());
 app.use('/api/v1',mainRouter);
 
-
-app.listen(8080,()=>{
-    console.log(`listning on ${8080} port`);
+const PORT=process.env.PORT || 8080;
+app.listen(PORT,()=>{
+    console.log(`listning on ${PORT} port`);
 })
